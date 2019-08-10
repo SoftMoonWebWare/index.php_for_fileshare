@@ -10,8 +10,17 @@ The generated HTML page allows end-users to expand/collapse sub-directories with
 The file is a complete basic HTML5 frame.
 Note the &lt;base&gt; tag in the &lt;head&gt; with may be modified/removed - see the comments for more info
   
-You may modify the filetypes that are listed in the index to suit your needs.  See the middle of the file (between the &lt;head&gt; and and &lt;body&gt;) in the PHP section.
+You may modify the filetypes that are listed in the index to suit your needs.  See the middle of the file (between the &lt;head&gt; and &lt;body&gt;) in the PHP section.
   
 From there, if you know what you are doing, style it any way you want, add any additional content you want.
+
+To use:
+just drop it in the folder on your server that you want indexed.
+
+you can then see the generated index like this in your browser (for example):
+http://mywebsite.com/share/
+
+or this (for example):
+http://mywebsite.com/share/index.php
 
 Aloha!
