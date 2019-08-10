@@ -18,9 +18,11 @@ To use:
 just drop it in the folder on your server that you want indexed.
 
 you can then see the generated index like this in your browser (for example):
-http://mywebsite.com/share/
+
+&#104;ttp://mywebsite&#46;com/share/
 
 or this (for example):
-http://mywebsite.com/share/index.php
+
+&#104;ttp://mywebsite&#46;com/share/index.php
 
 Aloha!
