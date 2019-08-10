@@ -8,9 +8,9 @@ The generated HTML page allows end-users to expand/collapse sub-directories with
 3. open sub-directories individually - allows the end-user to open and close them seperately.
 
 The file is a complete basic HTML5 frame.
-Note the <base> tag in the <head> with may be modified/removed - see the comments for more info
+Note the &lt;base&gt; tag in the &lt;head&gt; with may be modified/removed - see the comments for more info
   
-You may modify the filetypes that are listed in the index to suit your needs.  See the middle of the file (between the <head> and and <body>) in the PHP section.
+You may modify the filetypes that are listed in the index to suit your needs.  See the middle of the file (between the &lt;head&gt; and and &lt;body&gt;) in the PHP section.
   
 From there, if you know what you are doing, style it any way you want, add any additional content you want.
 
