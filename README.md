@@ -26,3 +26,5 @@ or this (for example):
 &#104;ttp://mywebsite&#46;com/share/index.php
 
 Aloha!
+
+p.s. it is really annoying that even when I encode the fake website examples above with HTML entities, they show up on github as valid hyperlinks.  don't click on them.
