@@ -138,7 +138,7 @@ Function show_dir($base, $tree, $tabs="")  {
 			continue;  }
 		// ¿sometimes rawurlencode works, sometimes not?
 		//echo $tabs, '<li><a href="' ,rawurlencode($base),rawurlencode($F), '">' ,htmlentities($F), '</a> ≈ ' ,number_format($bytes/1024), "KB</li>\n";  }
-		echo $tabs, '<li><a href="' ,$base,$F, '" target="palette_file">' ,htmlentities($F), '</a> ≈ ' ,number_format($bytes/1024), "KB</li>\n";  }
+		echo $tabs, '<li><a href="' ,$base,$F, '" target="_file_">' ,htmlentities($F), '</a> ≈ ' ,number_format($bytes/1024), "KB</li>\n";  }
 	echo $tabs,"</ol>\n";  }
 
 
