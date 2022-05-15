@@ -1,5 +1,5 @@
 # index.php_for_fileshare
-single file generates an HTML directory/folder index with hyperlinks, filtertering in filetypes of your choise.  Other file types will not be included.
+single file generates an HTML directory/folder index with hyperlinks, filtertering <strong>in</strong> file-types of your choise.  Other file types will not be included.
 
 Subdirectories are included.
 The generated HTML page allows end-users to expand/collapse sub-directories with 3 options:
