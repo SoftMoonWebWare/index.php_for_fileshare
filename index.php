@@ -3,6 +3,7 @@
 <head>
 <meta charset='UTF-8' />
 <meta http-equiv='Content-Type' content="text/html; charset=utf-8" />
+<meta http-equiv='Cache-Control' content="no-store" />
 <title>fileshare index</title>
 
 
@@ -16,6 +17,9 @@ h2 span {
 	padding-left: 1.618em; }
 #directory_index label {
 	margin-left: .618em; }
+#directory_index > ol:first-of-type {
+	padding-top: .618em;
+	padding-bottom: .618em; }
 #directory_index ol,
 #directory_index ol a {
 	margin-right: .618em;
@@ -30,7 +34,9 @@ h2 span {
 	display: none; }
 #directory_index li > span:first-child {
 	color: black;
-	background-color: white; }
+	background-color: white;
+	cursor: default;
+	margin-right: .382em; }
 #directory_index.expand li > span:first-child,
 #directory_index.collapse li > span:first-child {
 	display: none; }
@@ -108,7 +114,7 @@ Function findAllFiles($dir=".", $match='/(.zip|.wav|.wma|.flac|.txt|.odt|.html|.
 	$D=opendir($dir);
 	while ($F=readdir($D))  {
 		if ($F==='.'  or  $F==='..')  continue;
-		if (is_dir($F))   {
+		if (is_dir($dir.$F))   {
 			$tree[$F]=findAllFiles($dir.$F);
 			$tree["/?\\"]=TRUE;
 			continue;  }
@@ -124,11 +130,15 @@ Function show_dir($base, $tree, $tabs="")  {
 	foreach($tree as $F=>$bytes)  {
 		if ($F==="/?\\")  continue;
 		if (is_array($bytes))  {  //$bytes is a sub-directory in this case
+			// ¿sometimes rawurlencode works, sometimes not?
+			//echo $tabs, '<li><span onclick="this.parentNode.toggleClass(\'expand\')">+</span><a href="' ,rawurlencode($base),rawurlencode($F), '/">' ,htmlentities($F), "/</a>\n";
 			echo $tabs, '<li><span onclick="this.parentNode.toggleClass(\'expand\')">+</span><a href="' ,$base,$F, '/">' ,htmlentities($F), "/</a>\n";
 			show_dir($base.$F."/", $bytes, $tabs."\t");
 			echo $tabs,"</li>\n";
 			continue;  }
-		echo $tabs, '<li><a href="' ,$base,$F, '">' ,htmlentities($F), '</a> ≈ ' ,number_format($bytes/1024), "KB</li>\n";  }
+		// ¿sometimes rawurlencode works, sometimes not?
+		//echo $tabs, '<li><a href="' ,rawurlencode($base),rawurlencode($F), '">' ,htmlentities($F), '</a> ≈ ' ,number_format($bytes/1024), "KB</li>\n";  }
+		echo $tabs, '<li><a href="' ,$base,$F, '" target="palette_file">' ,htmlentities($F), '</a> ≈ ' ,number_format($bytes/1024), "KB</li>\n";  }
 	echo $tabs,"</ol>\n";  }
 
 
